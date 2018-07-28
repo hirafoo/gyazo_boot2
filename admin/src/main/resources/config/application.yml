@@ -1,0 +1,4 @@
+spring.profiles: default
+spring.profiles.active: local
+spring.profiles.include: common
+server.port: 5005

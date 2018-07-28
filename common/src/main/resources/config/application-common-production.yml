@@ -13,3 +13,4 @@ image_base_dir: /usr/local/nginx/htdocs_gyazo/images/
 base_url: http://gyazo.example.com/
 spring.profiles.include:
   - mybatis-common
+  - freemarker
