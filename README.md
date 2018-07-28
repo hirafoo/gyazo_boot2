@@ -10,3 +10,5 @@ write to hosts
 # client
 
 https://github.com/typester/Gyazo-Mac/
+
+set `http://local.gyazo.example.com/api/upload` to `Upload URL`
