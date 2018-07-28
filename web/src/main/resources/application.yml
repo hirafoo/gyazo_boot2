@@ -1,2 +1,5 @@
+spring.profiles: default
+spring.profiles.active: local
+
 spring.profiles.include: common
 foo: "foo-web"
