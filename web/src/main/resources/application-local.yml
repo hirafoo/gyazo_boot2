@@ -1,0 +1,2 @@
+spring.profiles.include: common-local
+foo: "foo-web-local"
