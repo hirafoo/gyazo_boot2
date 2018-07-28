@@ -1,1 +1,14 @@
 hoge: "hoge-common-local"
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/gyazo_local
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password:
+logging:
+  file: /tmp/gyazo_local.log
+  level:
+    org.springframework.web: INFO
+image_base_dir: /usr/local/nginx/htdocs_gyazo_local/images/
+spring.profiles.include:
+  - mybatis-common
