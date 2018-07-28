@@ -12,6 +12,7 @@
   </tr>
 </table>
 
+<img src="${image_url}"/>
 
 <form method="post" action="/image/delete/${image.id}">
     <input type="submit" value="delete">

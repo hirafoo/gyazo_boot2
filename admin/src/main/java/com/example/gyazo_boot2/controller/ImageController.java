@@ -6,6 +6,7 @@ import com.example.gyazo_boot2.service.ImageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,8 @@ public class ImageController {
     @Autowired
     ImageService imageService;
 
+    @Value("${base_url}")
+    private String baseUrl;
 
     private static Logger log = LoggerFactory.getLogger(AdminApplication.class);
 
@@ -37,7 +40,9 @@ public class ImageController {
     @RequestMapping(value="/image/detail", method = RequestMethod.GET)
     public String detail(@RequestParam(value="id") Integer id, Model model) {
         final Image image = imageService.selectOne(id);
+        log.info("{}", image.url(baseUrl));
         model.addAttribute("image", image);
+        model.addAttribute("image_url", image.url(baseUrl));
         return "image/detail";
     }
 
