@@ -1,4 +1,4 @@
-// web
+// admin
 
 dependencies {
     compile project(':common')
