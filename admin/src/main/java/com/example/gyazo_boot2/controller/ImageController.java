@@ -48,7 +48,6 @@ public class ImageController {
 
     @RequestMapping("/image/delete/{id}")
     public String delete(@PathVariable int id, Model model) {
-        final Image image = imageService.selectOne(id);
         imageService.delete(id);
         return "redirect:/image/";
     }

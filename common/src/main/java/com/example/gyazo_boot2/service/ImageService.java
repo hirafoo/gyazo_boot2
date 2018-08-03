@@ -69,6 +69,9 @@ public class ImageService {
     }
 
     public void delete(int id) {
+        final Image image = this.selectOne(id);
+        File file = new File(imageBaseDir + image.getHash() + ".png");
+        file.delete();
         imageMapper.delete(id);
     }
 
